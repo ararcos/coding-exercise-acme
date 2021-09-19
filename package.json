@@ -1,0 +1,19 @@
+{
+  "name": "coding-exercise-acme",
+  "version": "1.0.0",
+  "description": "coding-exercise-acme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ararcos/coding-exercise-acme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ararcos/coding-exercise-acme/issues"
+  },
+  "homepage": "https://github.com/ararcos/coding-exercise-acme#readme"
+}
