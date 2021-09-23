@@ -1,8 +1,8 @@
 "use strict";
 
 // Declaration of modules
-const globals = require("../utils/global");
-const { createEmployee } = require("../service/paymentService");
+const globals = require("../utils/global.js");
+const { createEmployee } = require("../service/paymentService.js");
 
 /**
  * calculate the payment of the employees registered in the txt

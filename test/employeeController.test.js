@@ -1,4 +1,4 @@
-const EmployeeController = require("../src/controller/employeeController");
+const EmployeeController = require("../src/controller/employeeController.js");
 
 describe("Format data", () => {
     test("should respond with true when the data is in the correct format", () => {

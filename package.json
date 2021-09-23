@@ -11,7 +11,7 @@
         "type": "git",
         "url": "git+https://github.com/ararcos/coding-exercise-acme.git"
     },
-    "author": "",
+    "author": "Alexander Arcos",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/ararcos/coding-exercise-acme/issues"

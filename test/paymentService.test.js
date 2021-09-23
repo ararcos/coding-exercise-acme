@@ -1,6 +1,6 @@
-const WorkDay = require("../src/models/workDay");
-const utils = require("../src/utils/utils");
-const PaymentService = require("../src/service/paymentService");
+const WorkDay = require("../src/models/workDay.js");
+const utils = require("../src/utils/utils.js");
+const PaymentService = require("../src/service/paymentService.js");
 describe("Employee Object", () => {
     test("should respond with an employee object where the salary is 945", () => {
         const data = "ALEX=MO02:00-4:00,TH14:00-00:00,FR00:01-11:00,SA10:00-00:00,SU00:01-05:00";

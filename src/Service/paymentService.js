@@ -2,8 +2,8 @@
 
 // Declaration of modules
 const globals = require("../utils/global.js");
-const Employee = require("../models/employee");
-const WorkDay = require("../models/workDay");
+const Employee = require("../models/employee.js");
+const WorkDay = require("../models/workDay.js");
 const utils = require("../utils/utils.js");
 
 /**
