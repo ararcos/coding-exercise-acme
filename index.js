@@ -28,7 +28,9 @@ readInterface.question("Enter the file path(default: test/employees.txt) => ", (
 
         //Call the function to calculate the payment of the employees registered in the txt.
         const employees = getEmployeePayment(data);
-        print(employees);
+        if (employees != null) {
+            print(employees);
+        }
         readInterface.close();
     });
 });
