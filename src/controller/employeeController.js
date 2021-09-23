@@ -1,35 +1,50 @@
 "use strict";
 
+// Declaration of modules
 const globals = require("../utils/global");
-const Employee = require("../models/employee");
 const { createEmployee } = require("../service/paymentService");
 
+/**
+ * calculate the payment of the employees registered in the txt
+ * @param {String} data The employee data txt
+ */
 exports.getEmployeePayment = (data) => {
     let employees = [];
-    if (isValidData(data)) {
-        let employeesData = splitDataEmployees(data);
+    if (this.isValidData(data)) {
+        let employeesData = this.splitDataEmployees(data);
         employeesData.forEach(element => {
-            employees.push(createEmployee(element));
+            let employee = createEmployee(element);
+            employees.push(employee);
         });
-        return;
+        return employees;
     }
     console.log("\n Oops!\n Employee data has an error")
-    return;
+    return null;
 }
 
-function print(employees) {
-    employees.forEach((element) => {})
-}
-
-function isValidData(data) {
+/**
+ * validates that the file data has the correct structure
+ * @param {String} data The employee data txt
+ * @returns {Boolean}
+ */
+exports.isValidData = (data) => {
     if (data == "") return false
-    let dataSplitReg = splitDataEmployees(data);
+    let dataSplitReg = this.splitDataEmployees(data);
     let dataValidated = dataSplitReg != null ? dataSplitReg.length : 0;
     let dataSplit = data.split("\n").length;
     return dataSplit == dataValidated;
 }
 
-function splitDataEmployees(data) {
-    let regs = new RegExp(globals.regEx, "gm");
-    return data.match(regs);
+/**
+ * separate information for each employee
+ * @param {String} data The employee data txt
+ * @returns {Array<String>} split employee data
+ */
+exports.splitDataEmployees = (data) => {
+    return data.match(globals.regExpEmployee);
+}
+exports.print = (employees) => {
+    employees.forEach(employee => {
+        console.log("\nEl monto a pagar por " + employee.getName() + " es : " + employee.getSalary() + " USD");
+    });
 }
