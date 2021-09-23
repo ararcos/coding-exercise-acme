@@ -2,7 +2,8 @@
 
 class Employee {
     constructor() {
-        this._workHours = [];
+        this._workDays = [];
+        this._salary = 0;
     }
     setName(name) {
         this._name = name;
@@ -10,18 +11,17 @@ class Employee {
     getName() {
         return this._name;
     }
-    setWorkHours(workHours) {
-        this._workHours = workHours;
+    setWorkDayS(workDays) {
+        this._workDays = workDays;
     }
-    getWorkHours() {
-        return this._workHours;
+    getWorkDays() {
+        return this._workDays;
     }
-    getPaid() {
-        this._hoursWork.forEach(element => {
-            let sum = 0;
-            sum = sum + element.getPaidDay();
-            console.log(sum);
-        });
+    setSalary(salary) {
+        this._salary = salary;
+    }
+    getSalary() {
+        return this._salary;
     }
 }
 
